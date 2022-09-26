@@ -1,4 +1,3 @@
-from email import message
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from .models import Category, Genre, Movie, MovieShots, Actor, Rating, RatingStar, Reviews
@@ -141,7 +140,7 @@ class MovieShotsAdmin(admin.ModelAdmin):
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ("movie", "ip")
+    list_display = ("movie", "movie", "ip")
 
 
 
